@@ -12,7 +12,7 @@ public interface UserDao {
 
 	User getUser(String username);
 
-//	int abc();
+	int countUser();
 
 //	void insertUser(User user);
 

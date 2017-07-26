@@ -7,6 +7,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.annotation.Resource;
+
 /**
  * ${DESCRIBE}
  *
@@ -17,7 +19,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @RequestMapping("user")
 public class UserController {
 
-	@Autowired
+	@Resource
 	private UserService userService;
 
 	@RequestMapping("getUser")
@@ -32,6 +34,6 @@ public class UserController {
 		System.out.println(user == null ? "" : user);
 //		user.setPassword("ccc");
 //		userService.updateUser(user);
-		System.out.println(userService.getUser("aaa"));
+		System.out.println(user);
 	}
 }

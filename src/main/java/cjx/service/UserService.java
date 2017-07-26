@@ -12,7 +12,7 @@ public interface UserService {
 
 	User getUser(String username);
 
-//	int count();
+	int countUser();
 
 //	void insertUser(User user);
 

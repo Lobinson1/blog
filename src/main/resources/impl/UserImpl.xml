@@ -6,4 +6,8 @@
     <select id="getUser" resultType="cjx.entity.User" parameterType="java.lang.String">
         SELECT * FROM cjx.t_cjx_user WHERE username = #{username}
     </select>
+
+    <select id="countUser" resultType="int">
+        SELECT COUNT(*) FROM cjx.t_cjx_user
+    </select>
 </mapper>

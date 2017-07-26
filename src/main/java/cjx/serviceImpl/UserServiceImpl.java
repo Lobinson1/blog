@@ -6,6 +6,8 @@ import cjx.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
+
 /**
  * ${DESCRIBE}
  *
@@ -15,7 +17,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class UserServiceImpl implements UserService {
 
-	@Autowired
+	@Resource
 	private UserDao userDao;
 
 	@Override
@@ -23,10 +25,10 @@ public class UserServiceImpl implements UserService {
 		return userDao.getUser(username);
 	}
 
-//	@Override
-//	public int count() {
-//		return userDao.abc();
-//	}
+	@Override
+	public int countUser() {
+		return userDao.countUser();
+	}
 
 //	@Override
 //	public void insertUser(User user) {
