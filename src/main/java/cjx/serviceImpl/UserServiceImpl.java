@@ -30,10 +30,10 @@ public class UserServiceImpl implements UserService {
 		return userDao.countUser();
 	}
 
-//	@Override
-//	public void insertUser(User user) {
-//		userDao.insertUser(user);
-//	}
+	@Override
+	public void insertUser(User user) {
+		userDao.insertUser(user);
+	}
 
 //	@Override
 //	public void updateUser(User user) {

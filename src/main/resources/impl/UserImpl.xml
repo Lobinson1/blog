@@ -10,4 +10,8 @@
     <select id="countUser" resultType="int">
         SELECT COUNT(*) FROM cjx.t_cjx_user
     </select>
+
+    <insert id="insertUser" parameterType="cjx.entity.User">
+        INSERT INTO cjx.t_cjx_user (username, password) VALUES (#{username}, #{password})
+    </insert>
 </mapper>
