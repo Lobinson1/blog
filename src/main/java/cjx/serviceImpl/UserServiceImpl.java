@@ -35,7 +35,11 @@ public class UserServiceImpl implements UserService {
 		userDao.insertUser(user);
 	}
 
-//	@Override
+	@Override
+	public boolean checkUsername(String username) {
+		return userDao.isExist(username);
+	}
+	//	@Override
 //	public void updateUser(User user) {
 //		userDao.updateUser(user);
 //	}

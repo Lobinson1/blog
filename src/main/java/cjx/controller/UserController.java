@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
 
 /**
  * ${DESCRIBE}
@@ -26,15 +27,8 @@ public class UserController {
 	@RequestMapping("getUser")
 	@ResponseBody
 	public void getUser(){
-//		User u = new User();
-//		u.setUsername("aaa");
-//		u.setPassword("bbb");
-//		userService.insertUser(u);
-//		System.out.println(userService.count());
 		User user = userService.getUser("aaa");
 		System.out.println(user == null ? "" : user);
-//		user.setPassword("ccc");
-//		userService.updateUser(user);
 		System.out.println(user);
 	}
 
@@ -48,5 +42,17 @@ public class UserController {
 		userService.insertUser(user);
 		model.addAttribute("user", userService.getUser(user.getUsername()));
 		return "login";
+	}
+
+	@RequestMapping("checkUsername")
+	@ResponseBody
+	public String checkUsername(HttpServletRequest request){
+		String username = request.getParameter("username");
+		if (userService.checkUsername(username)){
+			return "fails";
+		}else {
+			return "success";
+		}
+
 	}
 }

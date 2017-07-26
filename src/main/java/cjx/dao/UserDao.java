@@ -14,6 +14,8 @@ public interface UserDao {
 
 	int countUser();
 
+	boolean isExist(String username);
+
 	void insertUser(User user);
 
 //	void updateUser(User user);

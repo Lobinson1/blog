@@ -14,6 +14,8 @@ public interface UserService {
 
 	int countUser();
 
+	boolean checkUsername(String username);
+
 	void insertUser(User user);
 
 //	void updateUser(User user);

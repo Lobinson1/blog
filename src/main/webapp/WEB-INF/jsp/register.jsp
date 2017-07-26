@@ -17,7 +17,7 @@
         <div class="layui-form-item">
             <label class="layui-form-label">输入框</label>
             <div class="layui-input-block">
-                <input type="text" name="username" required  lay-verify="required" placeholder="请输入标题" autocomplete="off" class="layui-input">
+                <input type="text" name="username" required lay-verify="required|username" placeholder="请输入标题" autocomplete="off" class="layui-input">
             </div>
         </div>
         <div class="layui-form-item">
@@ -34,5 +34,35 @@
         </div>
     </form>
 </div>
+<script type="application/javascript">
+    layui.use('form', function(){
+        var form = layui.form();
+        form.verify({
+            username: function (value, item) {
+                var valid = true;
+                var msg = "发生错误";
+                $.ajax({
+                    url: '${apps}/user/checkUsername',
+                    type: 'post',
+                    async: false,
+                    data: {
+                        'username' : value
+                    },
+                    success: function (data) {
+                        if (data != 'success'){
+                            valid = false;
+                            msg = "用户名已存在";
+                        }
+                    }
+                });
+                if (!valid){
+                    return msg;
+                }
+            }
+        });
+        form.render();
+    });
+
+</script>
 </body>
 </html>
