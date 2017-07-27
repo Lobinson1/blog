@@ -1,8 +1,9 @@
-package test;
+package test.service;
 
 import cjx.service.UserService;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
+import test.base.BaseJunit4Test;
 
 /**
  * ${DESCRIBE}

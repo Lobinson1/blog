@@ -44,6 +44,18 @@ public class UserController {
 		return "login";
 	}
 
+	@RequestMapping(value = "login", method = RequestMethod.GET)
+	public String login(){
+		return "login";
+	}
+
+	@RequestMapping(value = "login", method = RequestMethod.POST)
+	public String login(User user){
+		String username = user.getUsername();
+		String password = user.getPassword();
+		return "index";
+	}
+
 	@RequestMapping("checkUsername")
 	@ResponseBody
 	public String checkUsername(HttpServletRequest request){
@@ -53,6 +65,5 @@ public class UserController {
 		}else {
 			return "success";
 		}
-
 	}
 }
