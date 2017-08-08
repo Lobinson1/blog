@@ -1,6 +1,7 @@
 package cjx.dao;
 
 import cjx.entity.User;
+import tk.mybatis.mapper.common.Mapper;
 
 /**
  * ${DESCRIBE}
@@ -8,7 +9,7 @@ import cjx.entity.User;
  * @author chenjunxu
  * @date 2017/7/18
  */
-public interface UserDao {
+public interface UserDao extends Mapper<User> {
 
 	User getUser(String username);
 
@@ -16,7 +17,7 @@ public interface UserDao {
 
 	boolean isExist(String username);
 
-	void insertUser(User user);
+//	void insertUser(User user);
 
 //	void updateUser(User user);
 

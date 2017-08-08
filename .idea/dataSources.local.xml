@@ -9,9 +9,7 @@
       <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact" />
       <secret-storage>master_key</secret-storage>
       <user-name>root</user-name>
-      <introspection-schemas>*:cjx</introspection-schemas>
       <resolve-scope>test:</resolve-scope>
-      <unqualified-resolve-schemas>test:</unqualified-resolve-schemas>
     </data-source>
   </component>
 </project>

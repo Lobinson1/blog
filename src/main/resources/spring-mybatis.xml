@@ -53,6 +53,10 @@
         <property name = "sqlSessionFactoryBeanName" value = "sqlSessionFactory" />
     </bean>
 
+    <bean class="tk.mybatis.spring.mapper.MapperScannerConfigurer">
+        <property name="basePackage" value="com.isea533.mybatis.mapper"/>
+    </bean>
+
     <!-- 定义事务 -->
     <bean id = "transactionManager"
           class = "org.springframework.jdbc.datasource.DataSourceTransactionManager">

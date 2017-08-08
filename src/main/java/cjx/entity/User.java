@@ -1,5 +1,8 @@
 package cjx.entity;
 
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
 import java.io.Serializable;
 
 /**
@@ -8,8 +11,11 @@ import java.io.Serializable;
  * @author chenjunxu
  * @date 2017/7/18
  */
+@Table(name = "t_cjx_user")
 public class User implements Serializable {
 
+	@Id
+	@GeneratedValue(generator = "JDBC")
 	private int id;
 	private String username;
 	private String password;
