@@ -13,7 +13,7 @@
 </head>
 <body>
 <div class="layui-main">
-    <form action="${apps}/user/register" class="layui-form layui-form-pane" method="post">
+    <form action="${apps}/login/register" class="layui-form layui-form-pane" method="post">
         <div class="layui-form-item">
             <label class="layui-form-label">输入框</label>
             <div class="layui-input-block">
@@ -42,7 +42,7 @@
                 var valid = true;
                 var msg = "发生错误";
                 $.ajax({
-                    url: '${apps}/user/checkUsername',
+                    url: '${apps}/login/checkUsername',
                     type: 'post',
                     async: false,
                     data: {

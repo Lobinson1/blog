@@ -1,6 +1,7 @@
 package cjx.dao;
 
 import cjx.entity.User;
+import org.springframework.stereotype.Repository;
 import tk.mybatis.mapper.common.Mapper;
 
 /**
@@ -16,9 +17,5 @@ public interface UserDao extends Mapper<User> {
 	int countUser();
 
 	boolean isExist(String username);
-
-//	void insertUser(User user);
-
-//	void updateUser(User user);
 
 }

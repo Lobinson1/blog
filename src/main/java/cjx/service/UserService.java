@@ -18,6 +18,8 @@ public interface UserService {
 
 	void insertUser(User user);
 
-//	void updateUser(User user);
+	boolean checkLoginInfo(String username, String password);
+
+	void updateUser(User user);
 
 }

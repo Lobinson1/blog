@@ -42,5 +42,6 @@ public class UserDaoTest extends BaseJunit4Test {
 		System.out.println(u);
 		System.out.println(a);
 		System.out.println(aa);
+		System.out.println(userDao.countUser());
 	}
 }

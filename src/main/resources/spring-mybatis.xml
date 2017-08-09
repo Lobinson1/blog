@@ -39,22 +39,27 @@
     </bean>
 
     <!-- 结合Spring和Mybatis -->
-    <bean id = "sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
-        <property name="dataSource" ref="dataSource" />
-        <!-- 自动扫描mapping.xml文件 -->
-        <property name = "mapperLocations" value="classpath:impl/*.xml" />
-        <!-- 读取mybatis配置 -->
-        <property name="configLocation" value="classpath:mybatis-config.xml" />
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="dataSource"/>
+        <property name="mapperLocations">
+            <array>
+                <value>classpath:impl/*.xml</value>
+            </array>
+        </property>
+        <property name="typeAliasesPackage" value="com.isea533.mybatis.model"/>
+        <property name="plugins">
+            <array>
+                <!-- 主要看这里 -->
+                <bean class="com.github.abel533.mapperhelper.MapperInterceptor"/>
+            </array>
+        </property>
     </bean>
 
     <!-- DAO接口所在包名，Spring会自动查找其下的类 -->
-    <bean class = "org.mybatis.spring.mapper.MapperScannerConfigurer">
-        <property name = "basePackage" value="cjx.dao" />
-        <property name = "sqlSessionFactoryBeanName" value = "sqlSessionFactory" />
-    </bean>
-
     <bean class="tk.mybatis.spring.mapper.MapperScannerConfigurer">
-        <property name="basePackage" value="com.isea533.mybatis.mapper"/>
+        <property name="basePackage" value="cjx.dao"/>
+        <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory" />
+        <property name="markerInterface" value="tk.mybatis.mapper.common.Mapper"/>
     </bean>
 
     <!-- 定义事务 -->

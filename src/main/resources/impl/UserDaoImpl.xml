@@ -15,7 +15,4 @@
         <![CDATA[ select count(id) from cjx.t_cjx_user where username=#{username} ]]>
     </select>
 
-    <insert id="insertUser" parameterType="cjx.entity.User">
-        INSERT INTO cjx.t_cjx_user (username, password) VALUES (#{username}, #{password})
-    </insert>
 </mapper>

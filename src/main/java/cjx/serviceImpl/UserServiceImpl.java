@@ -6,8 +6,6 @@ import cjx.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import javax.annotation.Resource;
-
 /**
  * ${DESCRIBE}
  *
@@ -17,7 +15,7 @@ import javax.annotation.Resource;
 @Service
 public class UserServiceImpl implements UserService {
 
-	@Resource
+	@Autowired
 	private UserDao userDao;
 
 	@Override
@@ -36,11 +34,20 @@ public class UserServiceImpl implements UserService {
 	}
 
 	@Override
+	public boolean checkLoginInfo(String username, String password) {
+		User u = new User();
+		u.setUsername(username);
+		u.setPassword(password);
+		return userDao.selectCount(u) == 1;
+	}
+
+	@Override
 	public boolean checkUsername(String username) {
 		return userDao.isExist(username);
 	}
-	//	@Override
-//	public void updateUser(User user) {
-//		userDao.updateUser(user);
-//	}
+
+	@Override
+	public void updateUser(User user) {
+		userDao.updateByPrimaryKey(user);
+	}
 }
