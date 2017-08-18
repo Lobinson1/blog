@@ -1,7 +1,6 @@
 package cjx.controller;
 
 import cjx.entity.User;
-import cjx.service.UserService;
 import cjx.serviceImpl.UserServiceImpl;
 import cjx.utils.Digests;
 import cjx.utils.Encodes;
@@ -15,7 +14,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import javax.servlet.http.HttpServletRequest;
 
 /**
- * ${DESCRIBE}
+ * 登录逻辑控制
  *
  * @author chenjunxu
  * @date 2017/8/8
@@ -29,7 +28,7 @@ public class LoginController {
 
 	@RequestMapping(value = "register", method = RequestMethod.GET)
 	public String register(){
-		return "register";
+		return "login/register";
 	}
 
 	@RequestMapping(value = "register", method = RequestMethod.POST)
@@ -39,12 +38,12 @@ public class LoginController {
 		user.setPassword(encodePwd);
 		userService.insertUser(user);
 		model.addAttribute("user", userService.getUser(user.getUsername()));
-		return "login";
+		return "login/login";
 	}
 
 	@RequestMapping(value = "login", method = RequestMethod.GET)
 	public String login(){
-		return "login";
+		return "login/login";
 	}
 
 	@RequestMapping(value = "login", method = RequestMethod.POST)
@@ -53,7 +52,7 @@ public class LoginController {
 		String password = user.getPassword();
 		String encodePwd = Encodes.encodeHex(Digests.sha1(password.getBytes()));
 		if (userService.checkLoginInfo(username, encodePwd)){
-			return "index";
+			return "manager/index";
 		}else {
 			model.addAttribute("errorMsg", "123123");
 			return "error/loginError";
@@ -65,7 +64,7 @@ public class LoginController {
 	public String checkUsername(HttpServletRequest request){
 		String username = request.getParameter("username");
 		if (userService.checkUsername(username)){
-			return "fails";
+			return "false";
 		}else {
 			return "success";
 		}
