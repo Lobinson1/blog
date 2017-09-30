@@ -17,9 +17,9 @@
         <div class="layui-logo">第一步</div>
         <!-- 头部区域（可配合layui已有的水平导航） -->
         <ul class="layui-nav layui-layout-left">
-            <li class="layui-nav-item"><a href="">控制台</a></li>
-            <li class="layui-nav-item"><a href="">博客管理</a></li>
-            <li class="layui-nav-item"><a href="">用户管理</a></li>
+            <li class="layui-nav-item"><a href="javascript:void(0);" nav-code="console">控制台</a></li>
+            <li class="layui-nav-item"><a href="javascript:void(0);" nav-code="blog">博客管理</a></li>
+            <li class="layui-nav-item"><a href="javascript:void(0);" nav-code="user">用户管理</a></li>
             <li class="layui-nav-item">
                 <a href="javascript:void(0);">其它系统</a>
                 <dl class="layui-nav-child">
@@ -84,6 +84,11 @@
     //JavaScript代码区域
     layui.use('element', function(){
         var element = layui.element;
+
+        $(document).find("*[nav-code]").on('click', function () {
+            var navCode = $(this).attr("nav-code");
+            $("#index-body").attr("src", "${apps}/index/navCode?code="+navCode);
+        })
 
     });
 </script>
