@@ -9,7 +9,7 @@
 <html>
 <head>
     <%@include file="/WEB-INF/include/include.jsp"%>
-    <title>register</title>
+    <title>lobinson注册</title>
 </head>
 <body>
 <div class="layui-main">
@@ -39,24 +39,17 @@
         var form = layui.form();
         form.verify({
             username: function (value, item) {
-                var valid = true;
-                var msg = "发生错误";
-                $.ajax({
+                var text =$.ajax({
                     url: '${apps}/login/checkUsername',
                     type: 'post',
                     async: false,
                     data: {
                         'username' : value
                     },
-                    success: function (data) {
-                        if (data != 'success'){
-                            valid = false;
-                            msg = "用户名已存在";
-                        }
-                    }
-                });
-                if (!valid){
-                    return msg;
+                    dataType: 'json'
+                }).responseText;
+                if (text.result === 'error'){
+                    return text.msg;
                 }
             }
         });

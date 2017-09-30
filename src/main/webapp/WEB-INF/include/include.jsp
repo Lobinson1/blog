@@ -8,6 +8,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@include file="taglibs.jsp"%>
 <link rel="stylesheet" href="${apps}/static/layui/css/layui.css">
-<%--<script src="${apps}/static/layui/layui.js"></script>--%>
-<script src="${apps}/static/layui/lay/dest/layui.all.js"></script>
+<%--<script src="${apps}/static/layui/lay/dest/layui.all.js"></script>--%>
 <script src="${apps}/static/js/jquery.min.js"></script>
+<script src="${apps}/static/layui/layui.js"></script>

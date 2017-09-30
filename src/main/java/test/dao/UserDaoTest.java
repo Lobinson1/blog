@@ -10,6 +10,7 @@ import tk.mybatis.mapper.entity.Example;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.List;
+import java.util.Random;
 
 /**
  * ${DESCRIBE}
@@ -43,5 +44,20 @@ public class UserDaoTest extends BaseJunit4Test {
 		System.out.println(a);
 		System.out.println(aa);
 		System.out.println(userDao.countUser());
+	}
+
+	@Test
+	public void testtest(){
+		Random rm = new Random();
+
+		// 获得随机数
+		double pross = (1 + rm.nextDouble()) * Math.pow(10, 8);
+
+		// 将获得的获得随机数转化为字符串
+		String fixLenthString = String.valueOf(pross);
+		String aa = fixLenthString.substring(2, 8 + 2);
+
+		// 返回固定的长度的随机数
+		System.out.println(aa);
 	}
 }

@@ -4,6 +4,7 @@ import cjx.entity.User;
 import cjx.serviceImpl.UserServiceImpl;
 import cjx.utils.Digests;
 import cjx.utils.Encodes;
+import cjx.utils.ResultUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -21,10 +22,12 @@ import javax.servlet.http.HttpServletRequest;
  */
 @Controller
 @RequestMapping("login")
-public class LoginController {
+public class LoginController{
 
 	@Autowired
 	private UserServiceImpl userService;
+
+	private ResultUtils result;
 
 	@RequestMapping(value = "register", method = RequestMethod.GET)
 	public String register(){
@@ -59,14 +62,19 @@ public class LoginController {
 		}
 	}
 
+	@RequestMapping("index")
+	public String index(){
+		return "manager/index";
+	}
+
 	@RequestMapping("checkUsername")
 	@ResponseBody
 	public String checkUsername(HttpServletRequest request){
 		String username = request.getParameter("username");
 		if (userService.checkUsername(username)){
-			return "false";
+			return result.Error("用户名已存在");
 		}else {
-			return "success";
+			return result.Success("用户名不存在");
 		}
 	}
 }
