@@ -64,8 +64,8 @@
                         <dd><a href="">超链接</a></dd>
                     </dl>
                 </li>
-                <li class="layui-nav-item"><a href="">云市场</a></li>
-                <li class="layui-nav-item"><a href="">发布商品</a></li>
+                <li class="layui-nav-item"><a href="">哎哟喂</a></li>
+                <li class="layui-nav-item"><a href="">哎哟哟</a></li>
             </ul>
         </div>
     </div>
