@@ -60,6 +60,7 @@
     <style>
         .layui-bg-white{background-color: #ffffff!important;} /*白*/
         .layui-nav .layui-nav-item a{color: #8C918F}
+        .layui-nav .layui-nav-item a:hover{color: #93D1FF}
     </style>
 </head>
 <body>
@@ -72,18 +73,18 @@
                 <nav id="menu-wrap"><div id="menu-trigger">Menu</div>
                     <ul class="layui-nav layui-bg-blue layui-bg-white">
                         <li class="layui-nav-item">
-                            <a href="">控制台<span class="layui-badge">9</span></a>
+                            <a href="">HOME</a>
                         </li>
                         <li class="layui-nav-item">
-                            <a href="">个人中心<span class="layui-badge-dot"></span></a>
+                            <a href="">CENTER</a>
                         </li>
                         <li class="layui-nav-item">
-                            <a href=""><img src="http://t.cn/RCzsdCq" class="layui-nav-img">我</a>
-                            <dl class="layui-nav-child">
-                                <dd><a href="javascript:;">修改信息</a></dd>
-                                <dd><a href="javascript:;">安全管理</a></dd>
-                                <dd><a href="javascript:;">退了</a></dd>
-                            </dl>
+                            <a href="">IS ME</a>
+                            <%--<dl class="layui-nav-child">--%>
+                                <%--<dd><a href="javascript:;">修改信息</a></dd>--%>
+                                <%--<dd><a href="javascript:;">安全管理</a></dd>--%>
+                                <%--<dd><a href="javascript:;">退了</a></dd>--%>
+                            <%--</dl>--%>
                         </li>
                     </ul>
                 </nav>
@@ -94,7 +95,7 @@
                 <div class="row">
                     <div class="col-full t-center">
                         <div class="wrap-col">
-                            <div class="logo"><a href="#"><img src="images/logo.png"/></a></div>
+                            <div class="logo"><a href="#"><img src="${apps}/static/index/images/indexlogo.png"/></a></div>
                             <div class="tagline">Temporibus autem quibusdam et aut officiis</div>
                         </div>
                     </div>
@@ -423,7 +424,7 @@
                             <li><a href=""><i class="fa fa-github"></i></a></li>
                         </ul>
                         <div class="copy-right">
-                            <p>Copyright 20xx - More Templates <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a> - Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a></p>
+                            <p>Copyright 20xx - More </p>
                         </div>
                     </div>
                 </div>
@@ -460,4 +461,5 @@
     </script>
 
 </div>
-</body></html>
+</body>
+</html>
