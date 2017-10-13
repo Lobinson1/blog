@@ -8,14 +8,14 @@
     <!-- Basic Page Needs
   ================================================== -->
     <meta charset="utf-8">
-    <title>Artistry - Free Responsive Html5 Templates</title>
+    <title>Lobinson小屋</title>
     <meta name="description" content="Free Responsive Html5 Css3 Templates ">
     <meta name="author" content="">
+    <%@include file="WEB-INF/include/include.jsp"%>
 
     <!-- Mobile Specific Metas
   ================================================== -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <%@include file="WEB-INF/include/include.jsp"%>
     <!-- CSS
   ================================================== -->
     <link rel="stylesheet" href="${apps}/static/index/css/zerogrid.css">
@@ -96,7 +96,7 @@
                     <div class="col-full t-center">
                         <div class="wrap-col">
                             <div class="logo"><a href="#"><img src="${apps}/static/index/images/indexlogo.png"/></a></div>
-                            <div class="tagline">Temporibus autem quibusdam et aut officiis</div>
+                            <div class="tagline">这是我的一方小天地</div>
                         </div>
                     </div>
                 </div>
@@ -131,17 +131,17 @@
                                 <article>
                                     <div class="art-header">
                                         <div class="entry-title">
-                                            <a href="#">Post Format: Gallery</a>
+                                            <a href="#">水里的世界 画里的念想</a>
                                         </div>
-                                        <span>Posted on November 12, 2015</span>
+                                        <span>2015-11-12</span>
                                     </div>
                                     <div class="art-content">
                                         <div class="zoom-container">
-                                            <a href="single.html">
+                                            <a href="#">
                                                 <img src="${apps}/static/index/images/4.jpg" />
                                             </a>
                                         </div>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tincidunt, sapien nec aliquam viverra, libero elit euismod turpis, vel sollicitudin nisi eros eget tortor.</p>
+                                        <p>众生皆妄.</p>
                                         <div class="t-center"><a class="button button02" href="#">Read More</a></div>
                                     </div>
                                 </article>
@@ -150,17 +150,17 @@
                                 <article>
                                     <div class="art-header">
                                         <div class="entry-title">
-                                            <a href="#">Template: Featured Image (No Sidebar Layout)</a>
+                                            <a href="#">一个人吃饭旅行到处走走停停</a>
                                         </div>
-                                        <span>Posted on November 12, 2015</span>
+                                        <span>2015-11-12</span>
                                     </div>
                                     <div class="art-content">
                                         <div class="zoom-container">
-                                            <a href="single.html">
+                                            <a href="#">
                                                 <img src="${apps}/static/index/images/5.jpg" />
                                             </a>
                                         </div>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tincidunt, sapien nec aliquam viverra, libero elit euismod turpis, vel sollicitudin nisi eros eget tortor.</p>
+                                        <p>众生皆痴.</p>
                                         <div class="t-center"><a class="button button02" href="#">Read More</a></div>
                                     </div>
                                 </article>
@@ -171,17 +171,17 @@
                                         <article style="border:none;">
                                             <div class="art-header">
                                                 <div class="entry-title">
-                                                    <a href="#">Post Format: Gallery</a>
+                                                    <a href="#">脚下</a>
                                                 </div>
-                                                <span>Posted on November 12, 2015</span>
+                                                <span>2015-11-12</span>
                                             </div>
                                             <div class="art-content">
                                                 <div class="zoom-container">
-                                                    <a href="single.html">
+                                                    <a href="#">
                                                         <img src="${apps}/static/index/images/6.jpg" />
                                                     </a>
                                                 </div>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tincidunt, sapien nec aliquam viverra, libero elit euismod turpis, vel sollicitudin nisi eros eget tortor.</p>
+                                                <p>此生痴妄，纵皆是错怨，终是不悔.</p>
                                             </div>
                                         </article>
                                     </div>
@@ -191,17 +191,17 @@
                                         <article style="border:none;">
                                             <div class="art-header">
                                                 <div class="entry-title">
-                                                    <a href="#">Post Format: Gallery</a>
+                                                    <a href="#">匠人</a>
                                                 </div>
-                                                <span>Posted on November 12, 2015</span>
+                                                <span>2015-11-12</span>
                                             </div>
                                             <div class="art-content">
                                                 <div class="zoom-container">
-                                                    <a href="single.html">
+                                                    <a href="#">
                                                         <img src="${apps}/static/index/images/7.jpg" />
                                                     </a>
                                                 </div>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tincidunt, sapien nec aliquam viverra, libero elit euismod turpis, vel sollicitudin nisi eros eget tortor.</p>
+                                                <p>此生痴妄，纵皆是错怨，终是不悔.</p>
                                             </div>
                                         </article>
                                     </div>
@@ -211,17 +211,17 @@
                                         <article style="border:none;">
                                             <div class="art-header">
                                                 <div class="entry-title">
-                                                    <a href="#">Post Format: Gallery</a>
+                                                    <a href="#">丛生</a>
                                                 </div>
-                                                <span>Posted on November 12, 2015</span>
+                                                <span>2015-11-12</span>
                                             </div>
                                             <div class="art-content">
                                                 <div class="zoom-container">
-                                                    <a href="single.html">
+                                                    <a href="#">
                                                         <img src="${apps}/static/index/images/8.jpg" />
                                                     </a>
                                                 </div>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tincidunt, sapien nec aliquam viverra, libero elit euismod turpis, vel sollicitudin nisi eros eget tortor.</p>
+                                                <p>此生痴妄，纵皆是错怨，终是不悔.</p>
                                             </div>
                                         </article>
                                     </div>
@@ -231,17 +231,17 @@
                                         <article style="border:none;">
                                             <div class="art-header">
                                                 <div class="entry-title">
-                                                    <a href="#">Post Format: Gallery</a>
+                                                    <a href="#">看你</a>
                                                 </div>
-                                                <span>Posted on November 12, 2015</span>
+                                                <span>2015-11-12</span>
                                             </div>
                                             <div class="art-content">
                                                 <div class="zoom-container">
-                                                    <a href="single.html">
+                                                    <a href="#">
                                                         <img src="${apps}/static/index/images/9.jpg" />
                                                     </a>
                                                 </div>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tincidunt, sapien nec aliquam viverra, libero elit euismod turpis, vel sollicitudin nisi eros eget tortor.</p>
+                                                <p>此生痴妄，纵皆是错怨，终是不悔.</p>
                                             </div>
                                         </article>
                                     </div>
@@ -249,22 +249,21 @@
                             </div>
                         </div>
                     </div>
-                    <div class="copyrights">Collect from <a href="http://www.cssmoban.com/" >企业网站模板</a></div>
                     <div id="sidebar" class="col-1-3">
                         <!---- Start Widget ---->
                         <div class="widget wid-about">
                             <div class="wid-header">
-                                <h5>ABOUT ME</h5>
+                                <h5>关于她</h5>
                             </div>
                             <div class="wid-content">
                                 <img src="${apps}/static/index/images/10.jpg" />
-                                <p>My name is Activello and I am an awesome WordPress blog theme for photography, food, travel and other blogs. I was created by colorlib.</p>
+                                <p>她的名字是 Activello ，嗯，不能告诉你更多了.</p>
                             </div>
                         </div>
                         <!---- Start Widget ---->
                         <div class="widget wid-follow">
                             <div class="wid-header">
-                                <h5>FOLLOW ME</h5>
+                                <h5>关注她</h5>
                             </div>
                             <div class="wid-content">
                                 <ul class="quick-link">
@@ -280,19 +279,19 @@
                         <!---- Start Widget ---->
                         <div class="widget wid-post">
                             <div class="wid-header">
-                                <h5>Latest Posts</h5>
+                                <h5>最新情报</h5>
                             </div>
                             <div class="wid-content">
                                 <div class="post">
                                     <div class="zoom-container">
-                                        <a href="single.html">
+                                        <a href="#">
                                             <img src="${apps}/static/index/images/11.jpg" />
                                         </a>
                                     </div>
                                     <div class="wrapper">
-                                        <h5 class="vid-name"><a href="#">Video's Name</a></h5>
+                                        <h5 class="vid-name"><a href="#">这是啥</a></h5>
                                         <div class="info">
-                                            <h6>By <a href="#">Kelvin</a></h6>
+                                            <h6>By <a href="#">不知名</a></h6>
                                             <span><i class="fa fa-calendar"></i>25/3/2015</span>
                                             <span><i class="fa fa-heart"></i>1,200</span>
                                         </div>
@@ -300,14 +299,14 @@
                                 </div>
                                 <div class="post">
                                     <div class="zoom-container">
-                                        <a href="single.html">
+                                        <a href="#">
                                             <img src="${apps}/static/index/images/12.jpg" />
                                         </a>
                                     </div>
                                     <div class="wrapper">
-                                        <h5 class="vid-name"><a href="#">Video's Name</a></h5>
+                                        <h5 class="vid-name"><a href="#">这是啥</a></h5>
                                         <div class="info">
-                                            <h6>By <a href="#">Kelvin</a></h6>
+                                            <h6>By <a href="#">不知名</a></h6>
                                             <span><i class="fa fa-calendar"></i>25/3/2015</span>
                                             <span><i class="fa fa-heart"></i>1,200</span>
                                         </div>
@@ -315,14 +314,14 @@
                                 </div>
                                 <div class="post">
                                     <div class="zoom-container">
-                                        <a href="single.html">
+                                        <a href="#">
                                             <img src="${apps}/static/index/images/13.jpg" />
                                         </a>
                                     </div>
                                     <div class="wrapper">
-                                        <h5 class="vid-name"><a href="#">Video's Name</a></h5>
+                                        <h5 class="vid-name"><a href="#">这是啥</a></h5>
                                         <div class="info">
-                                            <h6>By <a href="#">Kelvin</a></h6>
+                                            <h6>By <a href="#">不知名</a></h6>
                                             <span><i class="fa fa-calendar"></i>25/3/2015</span>
                                             <span><i class="fa fa-heart"></i>1,200</span>
                                         </div>
@@ -330,14 +329,14 @@
                                 </div>
                                 <div class="post">
                                     <div class="zoom-container">
-                                        <a href="single.html">
+                                        <a href="#">
                                             <img src="${apps}/static/index/images/14.jpg" />
                                         </a>
                                     </div>
                                     <div class="wrapper">
-                                        <h5 class="vid-name"><a href="#">Video's Name</a></h5>
+                                        <h5 class="vid-name"><a href="#">这是啥</a></h5>
                                         <div class="info">
-                                            <h6>By <a href="#">Kelvin</a></h6>
+                                            <h6>By <a href="#">不知名</a></h6>
                                             <span><i class="fa fa-calendar"></i>25/3/2015</span>
                                             <span><i class="fa fa-heart"></i>1,200</span>
                                         </div>
@@ -348,15 +347,15 @@
                         <!---- Start Widget ---->
                         <div class="widget wid-category">
                             <div class="wid-header">
-                                <h5>CATEGORIES</h5>
+                                <h5>类别</h5>
                             </div>
                             <div class="wid-content">
                                 <ul>
-                                    <li><a href="#">Post Formats</a></li>
-                                    <li><a href="#">Template</a></li>
-                                    <li><a href="#">Cat A</a></li>
-                                    <li><a href="#">Edge Case</a></li>
-                                    <li><a href="#">Cat B</a></li>
+                                    <li><a href="#">发生格局</a></li>
+                                    <li><a href="#">样板</a></li>
+                                    <li><a href="#">你的猫A</a></li>
+                                    <li><a href="#">边缘地带</a></li>
+                                    <li><a href="#">你的猫B</a></li>
                                 </ul>
                             </div>
                         </div>
