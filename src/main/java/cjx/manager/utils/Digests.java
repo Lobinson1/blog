@@ -1,4 +1,4 @@
-package cjx.utils;
+package cjx.manager.utils;
 
 import org.apache.commons.lang.Validate;
 

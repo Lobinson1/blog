@@ -1,4 +1,4 @@
-package cjx.redis;
+package cjx.manager.redis;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;

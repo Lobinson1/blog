@@ -1,8 +1,8 @@
-package cjx.serviceImpl;
+package cjx.manager.serviceImpl;
 
-import cjx.dao.UserDao;
-import cjx.entity.User;
-import cjx.service.UserService;
+import cjx.manager.dao.UserDao;
+import cjx.manager.entity.User;
+import cjx.manager.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,8 +15,12 @@ import org.springframework.stereotype.Service;
 @Service
 public class UserServiceImpl implements UserService {
 
+	private final UserDao userDao;
+
 	@Autowired
-	private UserDao userDao;
+	public UserServiceImpl(UserDao userDao) {
+		this.userDao = userDao;
+	}
 
 	@Override
 	public User getUser(String username) {

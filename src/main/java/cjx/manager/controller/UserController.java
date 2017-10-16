@@ -1,15 +1,10 @@
-package cjx.controller;
+package cjx.manager.controller;
 
-import cjx.entity.User;
-import cjx.service.UserService;
+import cjx.manager.service.UserService;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
-import javax.servlet.http.HttpServletRequest;
 
 /**
  * ${DESCRIBE}

@@ -1,6 +1,6 @@
-package cjx.daoImpl;
+package cjx.manager.daoImpl;
 
-import cjx.redis.AbstractBaseRedis;
+import cjx.manager.redis.AbstractBaseRedis;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.ValueOperations;
 

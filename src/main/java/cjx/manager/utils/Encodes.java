@@ -1,4 +1,4 @@
-package cjx.utils;
+package cjx.manager.utils;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;

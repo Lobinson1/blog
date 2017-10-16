@@ -1,8 +1,10 @@
-package cjx.dao;
+package cjx.manager.dao;
 
-import cjx.entity.User;
+import cjx.manager.entity.User;
 import org.springframework.stereotype.Repository;
 import tk.mybatis.mapper.common.Mapper;
+
+import javax.annotation.Resource;
 
 /**
  * ${DESCRIBE}
@@ -10,6 +12,7 @@ import tk.mybatis.mapper.common.Mapper;
  * @author chenjunxu
  * @date 2017/7/18
  */
+@Repository
 public interface UserDao extends Mapper<User> {
 
 	User getUser(String username);

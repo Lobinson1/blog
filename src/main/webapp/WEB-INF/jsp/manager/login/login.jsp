@@ -19,7 +19,7 @@
     <div class="login-form">
         <h1>Login</h1>
         <br>
-        <form id="uForm" action="${apps}/login/login" method="post" class="layui-form layui-form-pane">
+        <form id="uForm" action="${apps}/manager/login" method="post" class="layui-form layui-form-pane">
             <div class="form-group log-status">
                 <input type="text" class="form-control" placeholder="Username " id="UserName" name="username" lay-verify="username">
                 <i class="fa fa-user"></i>

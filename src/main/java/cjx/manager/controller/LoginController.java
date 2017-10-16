@@ -1,10 +1,10 @@
-package cjx.controller;
+package cjx.manager.controller;
 
-import cjx.entity.User;
-import cjx.serviceImpl.UserServiceImpl;
-import cjx.utils.Digests;
-import cjx.utils.Encodes;
-import cjx.utils.ResultUtils;
+import cjx.manager.entity.User;
+import cjx.manager.serviceImpl.UserServiceImpl;
+import cjx.manager.utils.Digests;
+import cjx.manager.utils.Encodes;
+import cjx.manager.utils.ResultUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -13,6 +13,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  * 登录逻辑控制
@@ -21,7 +23,7 @@ import javax.servlet.http.HttpServletRequest;
  * @date 2017/8/8
  */
 @Controller
-@RequestMapping("login")
+@RequestMapping("manager/login")
 public class LoginController{
 
 	@Autowired
@@ -31,7 +33,7 @@ public class LoginController{
 
 	@RequestMapping(value = "register", method = RequestMethod.GET)
 	public String register(){
-		return "login/register";
+		return "manager/login/register";
 	}
 
 	@RequestMapping(value = "register", method = RequestMethod.POST)
@@ -41,30 +43,28 @@ public class LoginController{
 		user.setPassword(encodePwd);
 		userService.insertUser(user);
 		model.addAttribute("user", userService.getUser(user.getUsername()));
-		return "login/login";
+		return "manager/login/login";
 	}
 
-	@RequestMapping(value = "login", method = RequestMethod.GET)
+	@RequestMapping(method = RequestMethod.GET)
 	public String login(){
-		return "login/login";
+		return "manager/login/login";
 	}
 
-	@RequestMapping(value = "login", method = RequestMethod.POST)
-	public String login(User user, Model model){
+	@RequestMapping(method = RequestMethod.POST)
+	public String login(User user, Model model, HttpServletRequest request){
 		String username = user.getUsername();
 		String password = user.getPassword();
 		String encodePwd = Encodes.encodeHex(Digests.sha1(password.getBytes()));
 		if (userService.checkLoginInfo(username, encodePwd)){
+			User u = userService.getUser(username);
+			HttpSession session = request.getSession();
+			session.setAttribute("cjx_user_id", u.getId());
 			return "manager/index";
 		}else {
 			model.addAttribute("errorMsg", "123123");
 			return "error/loginError";
 		}
-	}
-
-	@RequestMapping("index")
-	public String index(){
-		return "manager/index";
 	}
 
 	@RequestMapping("checkUsername")
@@ -74,7 +74,7 @@ public class LoginController{
 		if (userService.checkUsername(username)){
 			return result.Error("用户名已存在");
 		}else {
-			return result.Success("用户名不存在");
+			return result.Success("用户名可用");
 		}
 	}
 }

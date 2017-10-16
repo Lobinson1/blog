@@ -1,6 +1,6 @@
-package cjx.service;
+package cjx.manager.service;
 
-import cjx.entity.User;
+import cjx.manager.entity.User;
 
 /**
  * ${DESCRIBE}

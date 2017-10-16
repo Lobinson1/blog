@@ -1,7 +1,7 @@
 package test.dao;
 
-import cjx.dao.UserDao;
-import cjx.entity.User;
+import cjx.manager.dao.UserDao;
+import cjx.manager.entity.User;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import test.base.BaseJunit4Test;
