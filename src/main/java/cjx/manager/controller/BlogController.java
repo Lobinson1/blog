@@ -18,7 +18,7 @@ import javax.servlet.http.HttpServletRequest;
  * @date 2017/10/16
  */
 @Controller
-@RequestMapping("manager/myblog")
+@RequestMapping("manager/blog")
 public class BlogController {
 
 	private final BlogService blogService;

@@ -5,6 +5,7 @@ import cjx.manager.serviceImpl.UserServiceImpl;
 import cjx.manager.utils.Digests;
 import cjx.manager.utils.Encodes;
 import cjx.manager.utils.ResultUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -47,7 +48,9 @@ public class LoginController{
 	}
 
 	@RequestMapping(method = RequestMethod.GET)
-	public String login(){
+	public String login(HttpServletRequest request, Model model){
+		String path = request.getParameter("server");
+		model.addAttribute("server", path);
 		return "manager/login/login";
 	}
 
@@ -56,11 +59,16 @@ public class LoginController{
 		String username = user.getUsername();
 		String password = user.getPassword();
 		String encodePwd = Encodes.encodeHex(Digests.sha1(password.getBytes()));
+		String path = request.getParameter("server");
 		if (userService.checkLoginInfo(username, encodePwd)){
 			User u = userService.getUser(username);
 			HttpSession session = request.getSession();
 			session.setAttribute("cjx_user_id", u.getId());
-			return "manager/index";
+			if (StringUtils.isNotBlank(path)){
+				return path;
+			}else {
+				return "manager/index";
+			}
 		}else {
 			model.addAttribute("errorMsg", "123123");
 			return "error/loginError";

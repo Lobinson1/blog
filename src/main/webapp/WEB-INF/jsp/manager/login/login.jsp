@@ -29,6 +29,7 @@
                 <input type="password" class="form-control" placeholder="Password" id="Passwod" name="password">
                 <i class="fa fa-lock"></i>
             </div>
+            <input type="hidden" name="server" value="${server}" />
             <a class="link" href="#">Lost your password?</a>
             <button class="log-btn" lay-submit lay-filter="username">Log in</button>
         </form>

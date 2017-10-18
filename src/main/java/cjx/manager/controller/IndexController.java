@@ -24,15 +24,22 @@ public class IndexController {
 		return "manager/index";
 	}
 
+	@RequestMapping("index")
+	public String managerIndex() {
+		return "manager/index/index";
+	}
+
 	@RequestMapping("navCode")
 	public String navCode(HttpServletRequest request){
 		String code = request.getParameter("code");
 		if (StringUtils.isNotBlank(code)){
 			switch (code){
 				case "blog":
-					return "myblog/list";
+					return "manager/blog/list";
+				case "user":
+					return "manager/user/list";
 				default:
-					return "manager/index";
+					return "manager/index/index";
 			}
 		}
 		return result.Error("编码不能为空");

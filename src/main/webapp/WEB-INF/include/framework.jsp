@@ -62,11 +62,12 @@
         </ul>
     </div>
 </div>
-<script type="text/javascript">
+<script type="text/javascript"  defer="defer">
     layui.use('element', function () {
 
     });
-    $('[nav-code]').on('click', function (e) {
-        console.log($(this).attr());
+    $('[nav-code]').on('click', function () {
+        var code = $(this).attr('nav-code');
+        $('#index-body').attr('src', '${apps}/manager/index/navCode?code='+code);
     })
 </script>
