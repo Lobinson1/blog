@@ -35,7 +35,7 @@
     <div id="card" class="weather">
         <svg id="inner">
             <defs>
-                <%--<path id="leaf" d="M41.9,56.3l0.1-2.5c0,0,4.6-1.2,5.6-2.2c1-1,3.6-13,12-15.6c9.7-3.1,19.9-2,26.1-2.1c2.7,0-10,23.9-20.5,25 c-7.5,0.8-17.2-5.1-17.2-5.1L41.9,56.3z"></path>--%>
+                <path id="leaf" d="M41.9,56.3l0.1-2.5c0,0,4.6-1.2,5.6-2.2c1-1,3.6-13,12-15.6c9.7-3.1,19.9-2,26.1-2.1c2.7,0-10,23.9-20.5,25 c-7.5,0.8-17.2-5.1-17.2-5.1L41.9,56.3z"></path>
             </defs>
             <circle id="sun" style="fill: #F7ED47" cx="0" cy="0" r="50"></circle>
             <g id="layer3"></g>
@@ -60,5 +60,4 @@
 <script src='${apps}/static/manager/index/js/jquery-2.2.4.min.js'></script>
 <script src='${apps}/static/manager/index/js/TweenMax.min.js'></script>
 <script src='${apps}/static/manager/index/js/snap.svg-min.js'></script>
-<script src='${apps}/static/manager/index/js/zbvakw.js'></script>
 <script src="${apps}/static/manager/index/js/weather.js"></script>

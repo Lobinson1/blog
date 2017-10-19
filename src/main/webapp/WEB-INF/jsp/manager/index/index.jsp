@@ -23,9 +23,10 @@
                 <div class="alarm"></div>
                 <div class="digits"></div>
             </div>
+            <%@include file="/WEB-INF/include/weather.jsp"%>
         </div>
 
-        <%@include file="/WEB-INF/include/weather.jsp"%>
+
 
     </div>
 
