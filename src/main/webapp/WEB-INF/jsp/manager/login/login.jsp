@@ -12,7 +12,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <%@include file="/WEB-INF/include/include.jsp"%>
     <title>login</title>
-    <link rel="stylesheet" href="${apps}/static/css/login.css">
+    <link rel="stylesheet" href="${apps}/static/manager/login/css/login.css">
 </head>
 <body>
 <div class="container">
@@ -36,6 +36,9 @@
     </div>
 </div><!-- /container -->
 <script type="application/javascript">
+    if (window != top){
+        top.location.href = location.href;
+    }
 
     layui.use('form', function(){
         var form = layui.form();

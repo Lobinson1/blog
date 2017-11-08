@@ -7,5 +7,6 @@
 --%>
 <%@include file="taglibs.jsp"%>
 <link rel="stylesheet" href="${apps}/static/layui/css/layui.css">
+<link rel="stylesheet" href="${apps}/static/manager/css/all-style.css">
 <script src="${apps}/static/js/jquery.min.js"></script>
 <script src="${apps}/static/layui/layui.js"></script>

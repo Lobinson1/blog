@@ -28,6 +28,16 @@ pre{white-space: pre-wrap; white-space: -moz-pre-wrap; white-space: -pre-wrap; w
   url('../font/iconfont.woff?v=213') format('woff'),
   url('../font/iconfont.ttf?v=213') format('truetype');
 }
+
+@font-face {
+    font-family: 'shuxin';   /*字体名称*/
+    src: url('../font/shuxin.ttf');       /*字体源文件*/
+}
+
+@font-face {
+    font-family: 'xinghei';   /*字体名称*/
+    src: url('../font/xinghei.TTF');       /*字体源文件*/
+}
                     
 .layui-icon{
   font-family:"layui-icon" !important;

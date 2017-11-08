@@ -17,19 +17,20 @@ public class Blog {
 
 	@Id
 	@GeneratedValue(generator = "JDBC")
-	private int id;
+	private Integer id;
 	private String title;
+	private String blogAbstract;
 	private String content;
 	private Date publishTime;
 	private String keyword;
-	private int type;
+	private Integer type;
 	private String tips;
 
-	public int getId() {
+	public Integer getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 
@@ -39,6 +40,14 @@ public class Blog {
 
 	public void setTitle(String title) {
 		this.title = title;
+	}
+
+	public String getBlogAbstract() {
+		return blogAbstract;
+	}
+
+	public void setBlogAbstract(String blogAbstract) {
+		this.blogAbstract = blogAbstract;
 	}
 
 	public String getContent() {
@@ -65,11 +74,11 @@ public class Blog {
 		this.keyword = keyword;
 	}
 
-	public int getType() {
+	public Integer getType() {
 		return type;
 	}
 
-	public void setType(int type) {
+	public void setType(Integer type) {
 		this.type = type;
 	}
 
@@ -86,6 +95,7 @@ public class Blog {
 		return "Blog{" +
 				"id=" + id +
 				", title='" + title + '\'' +
+				", blogAbstract='" + blogAbstract + '\'' +
 				", content='" + content + '\'' +
 				", publishTime=" + publishTime +
 				", keyword='" + keyword + '\'' +

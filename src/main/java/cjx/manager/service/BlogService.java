@@ -10,15 +10,7 @@ import org.springframework.stereotype.Service;
  * @author chenjunxu
  * @date 2017/10/16
  */
-public interface BlogService {
-
-	Blog get(Integer id);
-
-	int insert(Blog blog);
-
-	int update(Blog blog);
-
-	int delete(Integer id);
+public interface BlogService extends BaseService<Blog> {
 
 	boolean checkTitle(String title);
 

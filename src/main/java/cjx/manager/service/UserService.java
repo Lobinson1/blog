@@ -8,7 +8,7 @@ import cjx.manager.entity.User;
  * @author chenjunxu
  * @date 2017/7/19
  */
-public interface UserService {
+public interface UserService extends BaseService<User> {
 
 	User getUser(String username);
 

@@ -6,6 +6,8 @@ import cjx.manager.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 /**
  * ${DESCRIBE}
  *
@@ -53,5 +55,30 @@ public class UserServiceImpl implements UserService {
 	@Override
 	public void updateUser(User user) {
 		userDao.updateByPrimaryKey(user);
+	}
+
+	@Override
+	public User get(Integer id) {
+		return userDao.selectByPrimaryKey(id);
+	}
+
+	@Override
+	public List<User> getAll() {
+		return userDao.selectAll();
+	}
+
+	@Override
+	public int insert(User user) {
+		return userDao.insert(user);
+	}
+
+	@Override
+	public int update(User user) {
+		return userDao.updateByPrimaryKey(user);
+	}
+
+	@Override
+	public int delete(Integer id) {
+		return userDao.deleteByPrimaryKey(id);
 	}
 }

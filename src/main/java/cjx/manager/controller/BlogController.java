@@ -2,6 +2,7 @@ package cjx.manager.controller;
 
 import cjx.manager.entity.Blog;
 import cjx.manager.service.BlogService;
+import cjx.manager.service.TypeService;
 import cjx.manager.utils.ResultUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -22,11 +23,13 @@ import javax.servlet.http.HttpServletRequest;
 public class BlogController {
 
 	private final BlogService blogService;
+	private final TypeService typeService;
 	private ResultUtils result;
 
 	@Autowired
-	public BlogController(BlogService blogService) {
+	public BlogController(BlogService blogService, TypeService typeService) {
 		this.blogService = blogService;
+		this.typeService = typeService;
 	}
 
 	@RequestMapping(method = RequestMethod.GET)
@@ -36,6 +39,7 @@ public class BlogController {
 
 	@RequestMapping(value = "insert", method = RequestMethod.GET)
 	public String insert(Model model){
+		model.addAttribute("blogType", typeService.getAll());
 		return "manager/blog/insert";
 	}
 
