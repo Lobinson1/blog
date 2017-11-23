@@ -65,7 +65,7 @@ public class LoginController{
 			HttpSession session = request.getSession();
 			session.setAttribute("cjx_user_id", u.getId());
 			if (StringUtils.isNotBlank(path)){
-				return "redirect:" + path;
+				return path;
 			}else {
 				return "manager/index";
 			}

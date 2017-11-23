@@ -7,6 +7,7 @@ import cjx.manager.utils.ResultUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -50,5 +51,10 @@ public class BlogController {
 			return result.Error("创建新博失败");
 		}
 		return result.Success("创建成功");
+	}
+
+	@RequestMapping("checkTitle/{title}")
+	public String checkTitle(@PathVariable String title){
+		return blogService.checkTitle(title) ? result.Success("标题可用") : result.False("标题已存在");
 	}
 }
