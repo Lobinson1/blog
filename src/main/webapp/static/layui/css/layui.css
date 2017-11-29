@@ -52,6 +52,11 @@ a cite{font-style: normal; *cursor:pointer;}
   url('../font/iconfont.woff?v=220') format('woff'),
   url('../font/iconfont.ttf?v=220') format('truetype');
 }
+
+@font-face {
+    font-family: 'xinghei';
+    src: url('../font/xinghei.TTF');
+}
                     
 .layui-icon{
   font-family:"layui-icon" !important;

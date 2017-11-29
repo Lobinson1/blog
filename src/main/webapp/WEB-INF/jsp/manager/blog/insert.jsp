@@ -15,7 +15,7 @@
     <div class="layui-container">
         <div class="layui-row">
             <div class="layui-col-xs9 layui-col-sm9 layui-col-md11">
-                <a href="javascript:window.history.back();" class="layui-btn-small layui-btn">返回</a>
+                <a href="javascript:window.history.back();" class="layui-btn-sm layui-btn">返回</a>
                 <h2 class="title-right">新建博客</h2>
                 <hr class="layui-bg-cyan">
                 <form action="${apps}/manager/blog/insert" method="post" class="layui-form">
@@ -24,6 +24,10 @@
                         <div class="layui-input-block">
                             <input type="text" name="title" required  lay-verify="required" placeholder="请输入标题" autocomplete="off" class="layui-input">
                         </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">类型</label>
+                        <div class="layui-input-block"></div>
                     </div>
                     <div class="layui-form-item">
                         <label class="layui-form-label">正文</label>
