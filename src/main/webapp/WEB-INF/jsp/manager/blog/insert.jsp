@@ -19,12 +19,31 @@
                 <h2 class="title-right">新建博客</h2>
                 <hr class="layui-bg-cyan">
                 <form action="${apps}/manager/blog/insert" method="post" class="layui-form">
-                    
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">标题</label>
+                        <div class="layui-input-block">
+                            <input type="text" name="title" required  lay-verify="required" placeholder="请输入标题" autocomplete="off" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">正文</label>
+                        <div class="layui-input-block">
+                            <div id="editor"></div>
+                        </div>
+                    </div>
                 </form>
             </div>
             <div class="layui-col-xs3 layui-col-sm3 layui-col-md1">
             </div>
         </div>
     </div>
+
+    <script type="text/javascript" src="${apps}/static/wangEditor/release/wangEditor.min.js"></script>
+<script type="text/javascript">
+    var E = window.wangEditor;
+    var editor = new E("#editor");
+    editor.create();
+
+</script>
 </body>
 </html>
